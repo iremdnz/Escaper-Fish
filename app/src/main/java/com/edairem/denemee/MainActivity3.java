@@ -19,11 +19,13 @@ import java.util.Random;
 
 public class MainActivity3 extends AppCompatActivity {
 
+    CountDownTimer yourCountDownTimer;
     TextView timeText;
     TextView scoreText;
     int score;
-    int temp; //for random
+    int temp, temp2; //for random
     int speed;
+    int bombCount;
     ImageView imageView;
     ImageView imageView2;
     ImageView imageView3;
@@ -34,6 +36,19 @@ public class MainActivity3 extends AppCompatActivity {
     ImageView imageView8;
     ImageView imageView9;
     ImageView[] imageArray;
+    ImageView imageView10;
+    ImageView imageView11;
+    ImageView imageView12;
+    ImageView imageView13;
+    ImageView imageView14;
+    ImageView imageView15;
+    ImageView imageView16;
+    ImageView imageView17;
+    ImageView imageView18;
+    ImageView[] bombArray;
+    ImageView heart1;
+    ImageView heart2;
+    ImageView heart3;
     SharedPreferences sharedPreferences;
     int storedScore;
     Handler handler;
@@ -58,12 +73,27 @@ public class MainActivity3 extends AppCompatActivity {
         imageView8 = findViewById(R.id.imageView8);
         imageView9 = findViewById(R.id.imageView9);
         imageArray = new ImageView[] {imageView,imageView2,imageView3,imageView4,imageView5,imageView6,imageView7,imageView8,imageView9};
+        imageView10 = findViewById(R.id.imageView10);
+        imageView11 = findViewById(R.id.imageView11);
+        imageView12 = findViewById(R.id.imageView12);
+        imageView13 = findViewById(R.id.imageView13);
+        imageView14 = findViewById(R.id.imageView14);
+        imageView15 = findViewById(R.id.imageView15);
+        imageView16 = findViewById(R.id.imageView16);
+        imageView17 = findViewById(R.id.imageView17);
+        imageView18 = findViewById(R.id.imageView18);
+        bombArray = new ImageView[] {imageView10,imageView12,imageView11,imageView13,imageView14,imageView15,imageView16,imageView17,imageView18};
+        heart1 = findViewById(R.id.heart1);
+        heart2 = findViewById(R.id.heart2);
+        heart3 = findViewById(R.id.heart3);
         sharedPreferences = getApplication().getSharedPreferences("com.edairem.denemee", Context.MODE_PRIVATE);
         score = 0;
         temp = -1;
+        temp2 = -1;
+        bombCount = 3;
         hideImages();
 
-        new CountDownTimer(60000,1000) {
+        yourCountDownTimer = new CountDownTimer(60000,1000) {
             @Override
             public void onTick(long l) {
                 timeText.setText("Time: " + l/1000);
@@ -76,27 +106,10 @@ public class MainActivity3 extends AppCompatActivity {
                 for(ImageView image: imageArray) {
                     image.setVisibility(View.INVISIBLE);
                 }
-                AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity3.this);
-                alert.setTitle("Restart");
-                alert.setMessage("Are you sure to restart game?");
-                alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        save();
-                        Intent intent1 = new Intent(getApplicationContext(),MainActivity2.class);
-                        startActivity(intent1);
-                    }
-                });
-                alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialogInterface, int i) {
-                        //Toast.makeText(MainActivity3.this,"Game Over!",Toast.LENGTH_LONG).show();
-                        save();
-                        Intent intent1 = new Intent(getApplicationContext(),MainActivity.class);
-                        startActivity(intent1);
-                    }
-                });
-                alert.show();
+                for(ImageView image: bombArray){ //hide bombs
+                    image.setVisibility(View.INVISIBLE);
+                }
+                gameOver();
             }
         }.start();
 
@@ -105,6 +118,29 @@ public class MainActivity3 extends AppCompatActivity {
     public void increaseScore(View view) {
         score++;
         scoreText.setText("Score: " + score);
+    }
+
+    public void liveAmount(View view) {
+        bombCount--;
+        if(bombCount == 2) {
+            heart3.setVisibility(View.INVISIBLE);
+        }
+        else if(bombCount == 1) {
+            heart2.setVisibility(View.INVISIBLE);
+        }
+        else { //bombCount == 0
+            heart1.setVisibility(View.INVISIBLE);
+            yourCountDownTimer.cancel();
+            handler.removeCallbacks(runnable);
+            for(ImageView image: imageArray){ //hide fishs
+                image.setVisibility(View.INVISIBLE);
+            }
+            for(ImageView image: bombArray){ //hide bombs
+                image.setVisibility(View.INVISIBLE);
+            }
+            gameOver();
+            Toast.makeText(MainActivity3.this,"Game Over!",Toast.LENGTH_LONG).show();
+        }
     }
 
     public void save() {
@@ -120,22 +156,61 @@ public class MainActivity3 extends AppCompatActivity {
             @Override
             public void run() {
 
-                for(ImageView image: imageArray){ //hide images
+                for(ImageView image: imageArray){ //hide fishs
+                    image.setVisibility(View.INVISIBLE);
+                }
+
+                for(ImageView image: bombArray){ //hide bombs
                     image.setVisibility(View.INVISIBLE);
                 }
 
                 Random rnd = new Random();
-                int i = rnd.nextInt(9);
-                while(i == temp){
-                    i = rnd.nextInt(9);
+                int choice = rnd.nextInt(100);
+
+                if(choice >= 33) {
+                    int fish = rnd.nextInt(9);
+                    while(fish == temp){
+                        fish = rnd.nextInt(9);
+                    }
+                    temp = fish;
+                    imageArray[fish].setVisibility(View.VISIBLE);
                 }
-                temp = i;
-                imageArray[i].setVisibility(View.VISIBLE);
+                else {
+                    int bomb = rnd.nextInt(9);
+                    while(bomb == temp2){
+                        bomb = rnd.nextInt(9);
+                    }
+                    temp2 = bomb;
+                    bombArray[bomb].setVisibility(View.VISIBLE);
+                }
                 handler.postDelayed(this, speed);
 
             }
         };
         handler.post(runnable);
+    }
+
+    public void gameOver() {
+        AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity3.this);
+        alert.setTitle("Restart");
+        alert.setMessage("Are you sure to restart game?");
+        alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                save();
+                Intent intent1 = new Intent(getApplicationContext(),MainActivity2.class);
+                startActivity(intent1);
+            }
+        });
+        alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialogInterface, int i) {
+                save();
+                Intent intent1 = new Intent(getApplicationContext(),MainActivity.class);
+                startActivity(intent1);
+            }
+        });
+        alert.show();
     }
 
 }
