@@ -192,6 +192,7 @@ public class MainActivity3 extends AppCompatActivity {
 
     public void gameOver() {
         AlertDialog.Builder alert = new AlertDialog.Builder(MainActivity3.this);
+        alert.setCancelable(false);
         alert.setTitle("Restart");
         alert.setMessage("Are you sure to restart game?");
         alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
