@@ -96,7 +96,7 @@ public class MainActivity3 extends AppCompatActivity {
         yourCountDownTimer = new CountDownTimer(60000,1000) {
             @Override
             public void onTick(long l) {
-                timeText.setText("Time: " + l/1000);
+                timeText.setText(":" + l/1000);
             }
 
             @Override
@@ -117,7 +117,7 @@ public class MainActivity3 extends AppCompatActivity {
 
     public void increaseScore(View view) {
         score++;
-        scoreText.setText("Score: " + score);
+        scoreText.setText(":" + score);
     }
 
     public void liveAmount(View view) {

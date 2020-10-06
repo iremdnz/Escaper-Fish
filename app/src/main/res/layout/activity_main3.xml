@@ -11,10 +11,12 @@
         android:id="@+id/gridLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="32dp"
-        app:layout_constraintBottom_toTopOf="@+id/scoreText"
+        android:layout_marginTop="65dp"
+        android:layout_marginBottom="103dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fish">
 
         <ImageView
             android:id="@+id/imageView"
@@ -102,25 +104,29 @@
         android:id="@+id/timeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="33dp"
         android:layout_marginTop="24dp"
-        android:layout_marginEnd="80dp"
-        android:text="Time: 0"
+        android:layout_marginEnd="39dp"
+        android:text=":0"
+        android:textColor="#0B0A0A"
         android:textSize="36sp"
-        app:layout_constraintEnd_toStartOf="@+id/gridLayout3"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/fish"
+        app:layout_constraintStart_toEndOf="@+id/timer"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/scoreText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="44dp"
-        android:text="Score: 0"
-        android:textSize="30sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="54dp"
+        android:text=":0"
+        android:textColor="#131313"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/gridLayout3"
+        app:layout_constraintStart_toEndOf="@+id/fish"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <GridLayout
         android:id="@+id/gridLayout2"
@@ -217,16 +223,16 @@
         android:id="@+id/gridLayout3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="25dp"
+        android:layout_marginTop="27dp"
+        android:layout_marginEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/timeText"
+        app:layout_constraintStart_toEndOf="@+id/scoreText"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
             android:id="@+id/heart1"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             android:layout_row="0"
             android:layout_column="0"
             app:srcCompat="@drawable/heart"
@@ -235,20 +241,43 @@
 
         <ImageView
             android:id="@+id/heart2"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             app:srcCompat="@drawable/heart"
             tools:layout_editor_absoluteX="95dp"
             tools:layout_editor_absoluteY="34dp" />
 
         <ImageView
             android:id="@+id/heart3"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
             app:srcCompat="@drawable/heart"
             tools:layout_editor_absoluteX="164dp"
             tools:layout_editor_absoluteY="34dp" />
 
 
     </GridLayout>
+
+    <ImageView
+        android:id="@+id/timer"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="11dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toBottomOf="@+id/fish"
+        app:layout_constraintEnd_toStartOf="@+id/timeText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/timeText"
+        app:srcCompat="@drawable/timer" />
+
+    <ImageView
+        android:id="@+id/fish"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="1dp"
+        app:layout_constraintEnd_toStartOf="@+id/scoreText"
+        app:layout_constraintStart_toEndOf="@+id/timeText"
+        app:layout_constraintTop_toTopOf="@+id/scoreText"
+        app:srcCompat="@drawable/fish" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
