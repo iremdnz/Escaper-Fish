@@ -4,15 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/menu"
     tools:context=".MainActivity2">
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="106dp"
-        android:text="Please select difficulty level"
-        android:textSize="30sp"
+        android:layout_width="232dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="163dp"
+        android:layout_marginBottom="81dp"
+        android:text="Please select\ndifficulty level"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/buttonEasy"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -21,9 +26,10 @@
         android:id="@+id/buttonEasy"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="82dp"
+        android:layout_marginBottom="33dp"
         android:onClick="option1"
         android:text="Easy"
+        app:layout_constraintBottom_toTopOf="@+id/buttonMedium"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
@@ -32,9 +38,10 @@
         android:id="@+id/buttonMedium"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="37dp"
+        android:layout_marginBottom="32dp"
         android:onClick="option2"
         android:text="Medium"
+        app:layout_constraintBottom_toTopOf="@+id/buttonHard"
         app:layout_constraintStart_toStartOf="@+id/buttonEasy"
         app:layout_constraintTop_toBottomOf="@+id/buttonEasy" />
 
@@ -42,9 +49,11 @@
         android:id="@+id/buttonHard"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginBottom="181dp"
         android:onClick="option3"
         android:text="Hard"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/buttonMedium"
         app:layout_constraintTop_toBottomOf="@+id/buttonMedium" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
