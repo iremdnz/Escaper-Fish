@@ -4,17 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/menu"
     tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/gameName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="105dp"
-        android:layout_marginBottom="105dp"
-        android:text="Catch The Kenny"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="@+id/highScoreText"
+        android:layout_width="203dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginBottom="68dp"
+        android:gravity="center"
+        android:text="Escaper\nFish"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/highScoreText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -23,32 +27,37 @@
         android:id="@+id/highScoreText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="226dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginBottom="77dp"
         android:text="High Score: 0"
+        android:textColor="#FFFFFF"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/startButton"
+        app:layout_constraintStart_toStartOf="@+id/gameName"
+        app:layout_constraintTop_toBottomOf="@+id/gameName" />
 
     <Button
         android:id="@+id/startButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="26dp"
-        android:layout_marginTop="91dp"
+        android:layout_marginBottom="24dp"
         android:onClick="startGame"
         android:text="Start"
-        app:layout_constraintStart_toStartOf="@+id/highScoreText"
+        app:layout_constraintBottom_toTopOf="@+id/exitButton"
+        app:layout_constraintStart_toStartOf="@+id/exitButton"
         app:layout_constraintTop_toBottomOf="@+id/highScoreText" />
 
     <Button
         android:id="@+id/exitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginBottom="137dp"
         android:onClick="exitGame"
         android:text="Exit"
-        app:layout_constraintStart_toStartOf="@+id/startButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/startButton" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
