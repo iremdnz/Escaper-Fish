@@ -9,14 +9,17 @@
 
     <TextView
         android:id="@+id/gameName"
-        android:layout_width="203dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="140dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="83dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="64dp"
+        android:fontFamily="@font/jacques_francois_shadow"
         android:gravity="center"
         android:text="Escaper\nFish"
         android:textColor="#FFFFFF"
-        android:textSize="40sp"
+        android:textSize="80sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/highScoreText"
         app:layout_constraintEnd_toEndOf="parent"
@@ -27,14 +30,14 @@
         android:id="@+id/highScoreText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="28dp"
         android:layout_marginBottom="77dp"
         android:text="High Score: 0"
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/startButton"
-        app:layout_constraintStart_toStartOf="@+id/gameName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gameName" />
 
     <Button
