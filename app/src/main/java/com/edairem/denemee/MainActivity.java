@@ -44,4 +44,9 @@ public class MainActivity extends AppCompatActivity {
         finishAffinity();
     }
 
+    public void help(View view) {
+        Intent intent = new Intent(MainActivity.this,MainActivity4.class);
+        startActivity(intent);
+    }
+
 }
