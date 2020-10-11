@@ -11,17 +11,17 @@
         android:id="@+id/gridLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="65dp"
-        android:layout_marginBottom="103dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginBottom="166dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fish">
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout4">
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="100dp"
-            android:layout_height="120dp"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
             android:layout_row="0"
             android:layout_column="0"
             android:onClick="increaseScore"
@@ -29,8 +29,8 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="100dp"
-            android:layout_height="120dp"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
             android:layout_row="0"
             android:layout_column="1"
             android:onClick="increaseScore"
@@ -38,8 +38,8 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="100dp"
-            android:layout_height="120dp"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
             android:layout_row="0"
             android:layout_column="2"
             android:onClick="increaseScore"
@@ -47,8 +47,8 @@
 
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="100dp"
-            android:layout_height="120dp"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
             android:layout_row="1"
             android:layout_column="0"
             android:onClick="increaseScore"
@@ -56,8 +56,8 @@
 
         <ImageView
             android:id="@+id/imageView5"
-            android:layout_width="100dp"
-            android:layout_height="120dp"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
             android:layout_row="1"
             android:layout_column="1"
             android:onClick="increaseScore"
@@ -65,8 +65,8 @@
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="100dp"
-            android:layout_height="120dp"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
             android:layout_row="1"
             android:layout_column="2"
             android:onClick="increaseScore"
@@ -74,8 +74,8 @@
 
         <ImageView
             android:id="@+id/imageView7"
-            android:layout_width="100dp"
-            android:layout_height="120dp"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
             android:layout_row="2"
             android:layout_column="0"
             android:onClick="increaseScore"
@@ -83,8 +83,8 @@
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="100dp"
-            android:layout_height="120dp"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
             android:layout_row="2"
             android:layout_column="1"
             android:onClick="increaseScore"
@@ -92,41 +92,13 @@
 
         <ImageView
             android:id="@+id/imageView9"
-            android:layout_width="100dp"
-            android:layout_height="120dp"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
             android:layout_row="2"
             android:layout_column="2"
             android:onClick="increaseScore"
             app:srcCompat="@drawable/fish9" />
     </GridLayout>
-
-    <TextView
-        android:id="@+id/timeText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="39dp"
-        android:text=":0"
-        android:textColor="#0B0A0A"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/fish"
-        app:layout_constraintStart_toEndOf="@+id/timer"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/scoreText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="54dp"
-        android:text=":0"
-        android:textColor="#131313"
-        android:textSize="36sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@+id/gridLayout3"
-        app:layout_constraintStart_toEndOf="@+id/fish"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <GridLayout
         android:id="@+id/gridLayout2"
@@ -137,8 +109,8 @@
 
         <ImageView
             android:id="@+id/imageView10"
-            android:layout_width="100dp"
-            android:layout_height="120dp"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
             android:layout_row="0"
             android:layout_column="0"
             android:onClick="liveAmount"
@@ -146,8 +118,8 @@
 
         <ImageView
             android:id="@+id/imageView11"
-            android:layout_width="100dp"
-            android:layout_height="120dp"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
             android:layout_row="0"
             android:layout_column="1"
             android:onClick="liveAmount"
@@ -155,8 +127,8 @@
 
         <ImageView
             android:id="@+id/imageView12"
-            android:layout_width="100dp"
-            android:layout_height="120dp"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
             android:layout_row="0"
             android:layout_column="2"
             android:onClick="liveAmount"
@@ -164,8 +136,8 @@
 
         <ImageView
             android:id="@+id/imageView13"
-            android:layout_width="100dp"
-            android:layout_height="120dp"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
             android:layout_row="1"
             android:layout_column="0"
             android:onClick="liveAmount"
@@ -173,8 +145,8 @@
 
         <ImageView
             android:id="@+id/imageView14"
-            android:layout_width="100dp"
-            android:layout_height="120dp"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
             android:layout_row="1"
             android:layout_column="1"
             android:onClick="liveAmount"
@@ -182,8 +154,8 @@
 
         <ImageView
             android:id="@+id/imageView15"
-            android:layout_width="100dp"
-            android:layout_height="120dp"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
             android:layout_row="1"
             android:layout_column="2"
             android:onClick="liveAmount"
@@ -191,8 +163,8 @@
 
         <ImageView
             android:id="@+id/imageView16"
-            android:layout_width="100dp"
-            android:layout_height="120dp"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
             android:layout_row="2"
             android:layout_column="0"
             android:onClick="liveAmount"
@@ -200,8 +172,8 @@
 
         <ImageView
             android:id="@+id/imageView17"
-            android:layout_width="100dp"
-            android:layout_height="120dp"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
             android:layout_row="2"
             android:layout_column="1"
             android:onClick="liveAmount"
@@ -209,8 +181,8 @@
 
         <ImageView
             android:id="@+id/imageView18"
-            android:layout_width="100dp"
-            android:layout_height="120dp"
+            android:layout_width="120dp"
+            android:layout_height="150dp"
             android:layout_row="2"
             android:layout_column="2"
             android:onClick="liveAmount"
@@ -223,10 +195,10 @@
         android:id="@+id/gridLayout3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="27dp"
-        android:layout_marginEnd="10dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="14dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/scoreText"
+        app:layout_constraintStart_toEndOf="@+id/gridLayout5"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
@@ -258,26 +230,65 @@
 
     </GridLayout>
 
-    <ImageView
-        android:id="@+id/timer"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="11dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toBottomOf="@+id/fish"
-        app:layout_constraintEnd_toStartOf="@+id/timeText"
+    <GridLayout
+        android:id="@+id/gridLayout4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintEnd_toStartOf="@+id/gridLayout5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/timeText"
-        app:srcCompat="@drawable/timer" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <ImageView
-        android:id="@+id/fish"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="1dp"
-        app:layout_constraintEnd_toStartOf="@+id/scoreText"
-        app:layout_constraintStart_toEndOf="@+id/timeText"
-        app:layout_constraintTop_toTopOf="@+id/scoreText"
-        app:srcCompat="@drawable/fish" />
+        <ImageView
+            android:id="@+id/timer"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_column="0"
+            app:layout_row="0"
+            app:srcCompat="@drawable/timer" />
+
+        <TextView
+            android:id="@+id/timeText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":0"
+            android:textColor="#0B0A0A"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_column="1"
+            app:layout_row="0" />
+    </GridLayout>
+
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toStartOf="@+id/gridLayout3"
+        app:layout_constraintStart_toEndOf="@+id/gridLayout4"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/fish"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_column="0"
+            app:layout_row="0"
+            app:srcCompat="@drawable/fish" />
+
+        <TextView
+            android:id="@+id/scoreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=":0"
+            android:textColor="#131313"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_column="1"
+            app:layout_row="0" />
+    </androidx.gridlayout.widget.GridLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
