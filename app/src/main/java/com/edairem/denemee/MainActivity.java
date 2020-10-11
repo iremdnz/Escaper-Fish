@@ -19,16 +19,15 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
         //Full screen
-        this.getWindow().getDecorView().setSystemUiVisibility(
+        /*this.getWindow().getDecorView().setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                         | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                         | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                         | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                         | View.SYSTEM_UI_FLAG_FULLSCREEN
-                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
-
+                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);*/
+        //getSupportActionBar().hide();
         highScoreText = findViewById(R.id.highScoreText);
         sharedPreferences = getApplication().getSharedPreferences("com.edairem.denemee", Context.MODE_PRIVATE);//minik bir veritabanı veren obje
         storedScore = sharedPreferences.getInt("storedScore", 0);
@@ -42,6 +41,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void exitGame(View view) {
         finishAffinity();
+    }
+
+    public void help(View view) {
+        Intent intent = new Intent(MainActivity.this,MainActivity4.class);
+        startActivity(intent);
     }
 
 }
