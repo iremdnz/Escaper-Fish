@@ -29,18 +29,21 @@ public class MainActivity2 extends AppCompatActivity {
         intent = new Intent(getApplicationContext(),MainActivity3.class);
         intent.putExtra("speed",1000);
         startActivity(intent);
+        finish();
     }
 
     public void option2(View view) {
         intent = new Intent(getApplicationContext(),MainActivity3.class);
         intent.putExtra("speed",800);
         startActivity(intent);
+        finish();
     }
 
     public void option3(View view) {
         intent = new Intent(getApplicationContext(),MainActivity3.class);
         intent.putExtra("speed",500);
         startActivity(intent);
+        finish();
     }
 
 }

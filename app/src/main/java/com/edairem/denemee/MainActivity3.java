@@ -210,6 +210,7 @@ public class MainActivity3 extends AppCompatActivity {
                 save();
                 Intent intent1 = new Intent(getApplicationContext(),MainActivity2.class);
                 startActivity(intent1);
+                finish();
             }
         });
         alert.setNegativeButton("No", new DialogInterface.OnClickListener() {
@@ -218,6 +219,7 @@ public class MainActivity3 extends AppCompatActivity {
                 save();
                 Intent intent1 = new Intent(getApplicationContext(),MainActivity.class);
                 startActivity(intent1);
+                finish();
             }
         });
         alert.show();
