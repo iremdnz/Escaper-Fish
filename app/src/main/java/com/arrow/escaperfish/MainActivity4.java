@@ -16,9 +16,5 @@ public class MainActivity4 extends AppCompatActivity {
     }
 
     // onClick method to close help menu
-   /* public void close(View view) {
-        Intent intent = new Intent(MainActivity4.this,MainActivity.class);
-        startActivity(intent);
-        finish();
-    }*/
+    public void close(View view) { finish(); }
 }

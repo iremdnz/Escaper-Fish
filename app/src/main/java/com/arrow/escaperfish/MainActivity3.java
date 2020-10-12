@@ -170,8 +170,8 @@ public class MainActivity3 extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 save();
-                Intent intent1 = new Intent(getApplicationContext(),MainActivity2.class);
-                startActivity(intent1);
+                Intent intent = new Intent(getApplicationContext(),MainActivity2.class);
+                startActivity(intent);
                 finish();
             }
         });
@@ -179,8 +179,6 @@ public class MainActivity3 extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
                 save();
-                Intent intent1 = new Intent(getApplicationContext(),MainActivity.class);
-                startActivity(intent1);
                 finish();
             }
         });
