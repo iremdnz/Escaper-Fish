@@ -9,43 +9,40 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+// MAIN SCREEN
 public class MainActivity extends AppCompatActivity {
 
-    int storedScore;
-    TextView highScoreText;
+    // Defining only preferences as global
     SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //Full screen
-        /*this.getWindow().getDecorView().setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                        | View.SYSTEM_UI_FLAG_FULLSCREEN
-                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);*/
-        //getSupportActionBar().hide();
-        highScoreText = findViewById(R.id.highScoreText);
+
+        // Getting a global preferences for a previously saved score
         sharedPreferences = getApplication().getSharedPreferences("com.arrow.escaperfish", Context.MODE_PRIVATE);//minik bir veritabanı veren obje
-        storedScore = sharedPreferences.getInt("storedScore", 0);
+        int storedScore = sharedPreferences.getInt("storedScore", 0);
+
+        // Show high score
+        TextView highScoreText = findViewById(R.id.highScoreText);
         highScoreText.setText("High Score: " + storedScore);
     }
 
-    public void startGame(View view) { //button's onClick method
+    // onClick method for Start button
+    public void startGame(View view) {
         Intent intent = new Intent(MainActivity.this,MainActivity2.class);
         startActivity(intent);
     }
 
+    // onClick method for Exit button
     public void exitGame(View view) {
         finishAffinity();
     }
 
+    // onClick method for Help (a.k.a. How to Play) button
     public void help(View view) {
         Intent intent = new Intent(MainActivity.this,MainActivity4.class);
         startActivity(intent);
     }
-
 }

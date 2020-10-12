@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
+// DIFFICULTY CHOOSING SCREEN
 public class MainActivity2 extends AppCompatActivity {
 
     Intent intent;
@@ -14,32 +15,27 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        //Full screen
-        /*this.getWindow().getDecorView().setSystemUiVisibility(
-                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                        | View.SYSTEM_UI_FLAG_FULLSCREEN
-                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);*/
-        //getSupportActionBar().hide();
     }
 
-    public void option1(View view) {
+    /*      onClick Methods for Difficulty Levels    */
+
+    // The "speed" value of each option is used by Handler as delay, in the next activity
+    // It's used for appearing speeds of objects on screen, differs by difficulty of game
+    public void option_easy(View view) {
         intent = new Intent(getApplicationContext(),MainActivity3.class);
         intent.putExtra("speed",1000);
         startActivity(intent);
         finish();
     }
 
-    public void option2(View view) {
+    public void option_medium(View view) {
         intent = new Intent(getApplicationContext(),MainActivity3.class);
         intent.putExtra("speed",800);
         startActivity(intent);
         finish();
     }
 
-    public void option3(View view) {
+    public void option_hard(View view) {
         intent = new Intent(getApplicationContext(),MainActivity3.class);
         intent.putExtra("speed",500);
         startActivity(intent);
