@@ -95,7 +95,7 @@ public class MainActivity3 extends AppCompatActivity {
         heart1 = findViewById(R.id.heart1);
         heart2 = findViewById(R.id.heart2);
         heart3 = findViewById(R.id.heart3);
-        sharedPreferences = getApplication().getSharedPreferences("com.edairem.denemee", Context.MODE_PRIVATE);
+        sharedPreferences = getApplication().getSharedPreferences("com.arrow.escaperfish", Context.MODE_PRIVATE);
         score = 0;
         temp = -1;
         temp2 = -1;

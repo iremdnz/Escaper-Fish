@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
                         | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);*/
         //getSupportActionBar().hide();
         highScoreText = findViewById(R.id.highScoreText);
-        sharedPreferences = getApplication().getSharedPreferences("com.edairem.denemee", Context.MODE_PRIVATE);//minik bir veritabanı veren obje
+        sharedPreferences = getApplication().getSharedPreferences("com.arrow.escaperfish", Context.MODE_PRIVATE);//minik bir veritabanı veren obje
         storedScore = sharedPreferences.getInt("storedScore", 0);
         highScoreText.setText("High Score: " + storedScore);
     }
