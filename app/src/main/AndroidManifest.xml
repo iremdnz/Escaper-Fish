@@ -9,6 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat">
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-3196942182820032~7640854161"/>
+
         <activity
             android:name="com.arrow.escaperfish.MainActivity4"
             android:screenOrientation="portrait"

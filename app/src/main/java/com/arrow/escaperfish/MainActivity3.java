@@ -14,7 +14,12 @@ import android.os.Handler;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 
 import java.util.Random;
 
@@ -40,10 +45,24 @@ public class MainActivity3 extends AppCompatActivity {
     private Runnable runnable;
     private MediaPlayer fish_snd, bomb_snd;
 
+    private AdView mAdView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
+
+        // Initializing the mobil ads SDK
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
         sharedPreferences = getApplication().getSharedPreferences("com.arrow.escaperfish", Context.MODE_PRIVATE);
 
         // Initializing visuals first
@@ -112,7 +131,6 @@ public class MainActivity3 extends AppCompatActivity {
             for(ImageView image: imageArray) image.setVisibility(View.INVISIBLE);
             for(ImageView image: bombArray)  image.setVisibility(View.INVISIBLE);
             gameOver();
-            Toast.makeText(MainActivity3.this,"Game Over!",Toast.LENGTH_LONG).show();
         }
     }
 
@@ -165,7 +183,7 @@ public class MainActivity3 extends AppCompatActivity {
         alert.setCancelable(false);
 
         alert.setTitle("Restart");
-        alert.setMessage("Are you sure to restart game?");
+        alert.setMessage("Would you like to play again?");
         alert.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {

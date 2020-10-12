@@ -275,7 +275,7 @@
             app:layout_row="0" />
     </GridLayout>
 
-    <androidx.gridlayout.widget.GridLayout
+    <GridLayout
         android:id="@+id/gridLayout5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -302,6 +302,20 @@
             android:textStyle="bold"
             app:layout_column="1"
             app:layout_row="0" />
-    </androidx.gridlayout.widget.GridLayout>
+    </GridLayout>
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="408dp"
+        android:layout_height="86dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        app:adSize="SMART_BANNER"
+        app:adUnitId="ca-app-pub-3940256099942544/6300978111"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout"></com.google.android.gms.ads.AdView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
