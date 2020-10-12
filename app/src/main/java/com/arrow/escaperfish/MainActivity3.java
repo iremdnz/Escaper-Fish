@@ -59,7 +59,7 @@ public class MainActivity3 extends AppCompatActivity {
             }
         });
 
-        mAdView = findViewById(R.id.adView);
+        mAdView = findViewById(R.id.adView3);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
@@ -91,6 +91,7 @@ public class MainActivity3 extends AppCompatActivity {
 
         // Starting game (Time: 60 seconds)
         gameStart();
+
         yourCountDownTimer = new CountDownTimer(60000,1000) {
             @Override
             public void onTick(long l) {
@@ -109,14 +110,14 @@ public class MainActivity3 extends AppCompatActivity {
 
     // Increasing score when player taps on a fish
     public void increaseScore(View view) {
-        fish_snd.start();
+        //fish_snd.start();
         score++;
         scoreText.setText(":" + score);
     }
 
     // Decreasing lives or checking remaining lives if player taps on a bomb
     public void liveAmount(View view) {
-        bomb_snd.start();
+        //bomb_snd.start();
         remaining_lives--;
         if       (remaining_lives == 2)  heart3.setVisibility(View.INVISIBLE);
         else if  (remaining_lives == 1)  heart2.setVisibility(View.INVISIBLE);
