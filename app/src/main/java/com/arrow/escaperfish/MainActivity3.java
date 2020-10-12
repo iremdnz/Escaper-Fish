@@ -40,7 +40,7 @@ public class MainActivity3 extends AppCompatActivity {
     int storedScore;
 
     // Requirements for gameplay, timer, sounds etc.
-    private CountDownTimer yourCountDownTimer;
+    private CountDownTimer countDownTimer;
     private Handler handler;
     private Runnable runnable;
     private MediaPlayer fish_snd, bomb_snd;
@@ -92,7 +92,7 @@ public class MainActivity3 extends AppCompatActivity {
         // Starting game (Time: 60 seconds)
         gameStart();
 
-        yourCountDownTimer = new CountDownTimer(60000,1000) {
+        countDownTimer = new CountDownTimer(60000,1000) {
             @Override
             public void onTick(long l) {
                 timeText.setText(":" + l/1000);
@@ -125,7 +125,7 @@ public class MainActivity3 extends AppCompatActivity {
             heart1.setVisibility(View.INVISIBLE);
 
             // Stopping game and timer
-            yourCountDownTimer.cancel();
+            countDownTimer.cancel();
             handler.removeCallbacks(runnable);
 
             // Hiding fishes and bombs, ending game
