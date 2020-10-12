@@ -7,6 +7,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
@@ -19,6 +20,8 @@ import java.util.Random;
 
 // GAME SCREEN
 public class MainActivity3 extends AppCompatActivity {
+
+    MediaPlayer ply;
 
     // Defining visuals
     private TextView timeText, scoreText;
@@ -84,12 +87,16 @@ public class MainActivity3 extends AppCompatActivity {
 
     // Increasing score when player taps on a fish
     public void increaseScore(View view) {
+        ply = MediaPlayer.create(MainActivity3.this,R.raw.blop);
+        ply.start();
         score++;
         scoreText.setText(":" + score);
     }
 
     // Decreasing lives or checking remaining lives if player taps on a bomb
     public void liveAmount(View view) {
+        ply = MediaPlayer.create(MainActivity3.this,R.raw.bom);
+        ply.start();
         remaining_lives--;
         if       (remaining_lives == 2)  heart3.setVisibility(View.INVISIBLE);
         else if  (remaining_lives == 1)  heart2.setVisibility(View.INVISIBLE);

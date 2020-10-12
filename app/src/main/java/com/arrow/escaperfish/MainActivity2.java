@@ -15,6 +15,7 @@ public class MainActivity2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
+
     }
 
     /*      onClick Methods for Difficulty Levels    */
@@ -37,7 +38,7 @@ public class MainActivity2 extends AppCompatActivity {
 
     public void option_hard(View view) {
         intent = new Intent(getApplicationContext(),MainActivity3.class);
-        intent.putExtra("speed",500);
+        intent.putExtra("speed",600);
         startActivity(intent);
         finish();
     }
