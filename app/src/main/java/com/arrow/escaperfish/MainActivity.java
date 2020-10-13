@@ -21,6 +21,8 @@ public class MainActivity extends AppCompatActivity {
     // Defining only preferences as global
     SharedPreferences sharedPreferences;
     private AdView mAdView;
+    private int storedScore;
+    private TextView highScoreText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,10 +43,23 @@ public class MainActivity extends AppCompatActivity {
 
         // Getting global preferences for previously saved high score
         sharedPreferences = getApplication().getSharedPreferences("com.arrow.escaperfish", Context.MODE_PRIVATE);
-        int storedScore = sharedPreferences.getInt("storedScore", 0);
+        storedScore = sharedPreferences.getInt("storedScore", 0);
 
         // Show high score
-        TextView highScoreText = findViewById(R.id.highScoreText);
+        highScoreText = findViewById(R.id.highScoreText);
+        highScoreText.setText("High Score: " + storedScore);
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+        // Getting global preferences for previously saved high score
+        sharedPreferences = getApplication().getSharedPreferences("com.arrow.escaperfish", Context.MODE_PRIVATE);
+        storedScore = sharedPreferences.getInt("storedScore", 0);
+
+        // Show high score
+        highScoreText = findViewById(R.id.highScoreText);
         highScoreText.setText("High Score: " + storedScore);
     }
 
@@ -64,5 +79,4 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this,MainActivity4.class);
         startActivity(intent);
     }
-
 }
