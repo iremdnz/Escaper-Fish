@@ -44,7 +44,6 @@ public class MainActivity3 extends AppCompatActivity {
     private Handler handler;
     private Runnable runnable;
     private MediaPlayer fish_snd, bomb_snd;
-
     private AdView mAdView;
 
     @Override
@@ -52,7 +51,7 @@ public class MainActivity3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main3);
 
-        // Initializing the mobil ads SDK
+        // Initializing the mobile ads SDK
         MobileAds.initialize(this, new OnInitializationCompleteListener() {
             @Override
             public void onInitializationComplete(InitializationStatus initializationStatus) {

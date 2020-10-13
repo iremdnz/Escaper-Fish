@@ -24,6 +24,7 @@
             android:layout_height="150dp"
             android:layout_row="0"
             android:layout_column="0"
+            android:contentDescription="@string/gameFish"
             android:onClick="increaseScore"
             app:srcCompat="@drawable/fish1" />
 
@@ -33,6 +34,7 @@
             android:layout_height="150dp"
             android:layout_row="0"
             android:layout_column="1"
+            android:contentDescription="@string/gameFish"
             android:onClick="increaseScore"
             app:srcCompat="@drawable/fish8" />
 
@@ -42,6 +44,7 @@
             android:layout_height="150dp"
             android:layout_row="0"
             android:layout_column="2"
+            android:contentDescription="@string/gameFish"
             android:onClick="increaseScore"
             app:srcCompat="@drawable/fish3" />
 
@@ -51,6 +54,7 @@
             android:layout_height="150dp"
             android:layout_row="1"
             android:layout_column="0"
+            android:contentDescription="@string/gameFish"
             android:onClick="increaseScore"
             app:srcCompat="@drawable/fish4" />
 
@@ -60,6 +64,7 @@
             android:layout_height="150dp"
             android:layout_row="1"
             android:layout_column="1"
+            android:contentDescription="@string/gameFish"
             android:onClick="increaseScore"
             app:srcCompat="@drawable/fish5" />
 
@@ -69,6 +74,7 @@
             android:layout_height="150dp"
             android:layout_row="1"
             android:layout_column="2"
+            android:contentDescription="@string/gameFish"
             android:onClick="increaseScore"
             app:srcCompat="@drawable/fish6" />
 
@@ -78,6 +84,7 @@
             android:layout_height="150dp"
             android:layout_row="2"
             android:layout_column="0"
+            android:contentDescription="@string/gameFish"
             android:onClick="increaseScore"
             app:srcCompat="@drawable/fish7" />
 
@@ -87,6 +94,7 @@
             android:layout_height="150dp"
             android:layout_row="2"
             android:layout_column="1"
+            android:contentDescription="@string/gameFish"
             android:onClick="increaseScore"
             app:srcCompat="@drawable/fish2" />
 
@@ -96,6 +104,7 @@
             android:layout_height="150dp"
             android:layout_row="2"
             android:layout_column="2"
+            android:contentDescription="@string/gameFish"
             android:onClick="increaseScore"
             app:srcCompat="@drawable/fish9" />
     </GridLayout>
@@ -118,6 +127,7 @@
             android:layout_row="0"
             android:layout_column="0"
             android:layout_gravity="center"
+            android:contentDescription="@string/gameBomb"
             android:onClick="liveAmount"
             app:srcCompat="@drawable/bomb" />
 
@@ -128,6 +138,7 @@
             android:layout_row="0"
             android:layout_column="1"
             android:layout_gravity="center"
+            android:contentDescription="@string/gameBomb"
             android:onClick="liveAmount"
             app:srcCompat="@drawable/bomb" />
 
@@ -138,6 +149,7 @@
             android:layout_row="0"
             android:layout_column="2"
             android:layout_gravity="center"
+            android:contentDescription="@string/gameBomb"
             android:onClick="liveAmount"
             app:srcCompat="@drawable/bomb" />
 
@@ -148,6 +160,7 @@
             android:layout_row="1"
             android:layout_column="0"
             android:layout_gravity="center"
+            android:contentDescription="@string/gameBomb"
             android:onClick="liveAmount"
             app:srcCompat="@drawable/bomb" />
 
@@ -158,6 +171,7 @@
             android:layout_row="1"
             android:layout_column="1"
             android:layout_gravity="center"
+            android:contentDescription="@string/gameBomb"
             android:onClick="liveAmount"
             app:srcCompat="@drawable/bomb" />
 
@@ -168,6 +182,7 @@
             android:layout_row="1"
             android:layout_column="2"
             android:layout_gravity="center"
+            android:contentDescription="@string/gameBomb"
             android:onClick="liveAmount"
             app:srcCompat="@drawable/bomb" />
 
@@ -178,6 +193,7 @@
             android:layout_row="2"
             android:layout_column="0"
             android:layout_gravity="center"
+            android:contentDescription="@string/gameBomb"
             android:onClick="liveAmount"
             app:srcCompat="@drawable/bomb" />
 
@@ -188,6 +204,7 @@
             android:layout_row="2"
             android:layout_column="1"
             android:layout_gravity="center"
+            android:contentDescription="@string/gameBomb"
             android:onClick="liveAmount"
             app:srcCompat="@drawable/bomb" />
 
@@ -198,6 +215,7 @@
             android:layout_row="2"
             android:layout_column="2"
             android:layout_gravity="center"
+            android:contentDescription="@string/gameBomb"
             android:onClick="liveAmount"
             app:srcCompat="@drawable/bomb" />
 
@@ -220,6 +238,7 @@
             android:layout_height="45dp"
             android:layout_row="0"
             android:layout_column="0"
+            android:contentDescription="@string/heart"
             app:srcCompat="@drawable/heart"
             tools:layout_editor_absoluteX="26dp"
             tools:layout_editor_absoluteY="34dp" />
@@ -228,6 +247,7 @@
             android:id="@+id/heart2"
             android:layout_width="45dp"
             android:layout_height="45dp"
+            android:contentDescription="@string/heart"
             app:srcCompat="@drawable/heart"
             tools:layout_editor_absoluteX="95dp"
             tools:layout_editor_absoluteY="34dp" />
@@ -236,6 +256,7 @@
             android:id="@+id/heart3"
             android:layout_width="45dp"
             android:layout_height="45dp"
+            android:contentDescription="@string/heart"
             app:srcCompat="@drawable/heart"
             tools:layout_editor_absoluteX="164dp"
             tools:layout_editor_absoluteY="34dp" />
@@ -259,6 +280,7 @@
             android:id="@+id/timer"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:contentDescription="@string/timer"
             app:layout_column="0"
             app:layout_row="0"
             app:srcCompat="@drawable/timer" />
@@ -267,7 +289,7 @@
             android:id="@+id/timeText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=":0"
+            android:text="@string/_0"
             android:textColor="#0B0A0A"
             android:textSize="36sp"
             android:textStyle="bold"
@@ -288,6 +310,7 @@
             android:id="@+id/fish"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:contentDescription="@string/fish"
             app:layout_column="0"
             app:layout_row="0"
             app:srcCompat="@drawable/fish" />
@@ -296,7 +319,7 @@
             android:id="@+id/scoreText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text=":0"
+            android:text="@string/_0"
             android:textColor="#131313"
             android:textSize="36sp"
             android:textStyle="bold"

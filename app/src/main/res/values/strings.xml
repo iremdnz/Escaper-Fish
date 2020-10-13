@@ -1,4 +1,19 @@
 <resources>
     <string name="app_name">Escaper Fish</string>
-
+    <string name="_0">:0</string>
+    <string name="heart">Heart</string>
+    <string name="timer">Timer</string>
+    <string name="fish">Fish</string>
+    <string name="gameFish">GameFish</string>
+    <string name="gameBomb">GameBomb</string>
+    <string name="level_sel">Please select\ndifficulty\nlevel</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+    <string name="main_title">Escaper\nFish</string>
+    <string name="high_score_0">High Score: 0</string>
+    <string name="how_to_play">HOW TO PLAY?</string>
+    <string name="help_p1">Try to catch as many fish as you can in 60 seconds.</string>
+    <string name="help_p2">The appearing speed of the fish increments as levels get harder.</string>
+    <string name="help_p3">You get 3 lives at the beginning, which you might lose if you tap the bombs.</string>
 </resources>

@@ -30,6 +30,7 @@ public class MainActivity2 extends AppCompatActivity {
             }
         });
 
+        // Ad
         mAdView = findViewById(R.id.adView2);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
