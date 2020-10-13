@@ -32,7 +32,6 @@ public class MainActivity3 extends AppCompatActivity {
     private ImageView heart1, heart2, heart3;
 
     private int score; // Score to be kept during gameplay only
-    private int fish_prev, bomb_prev; // To keep a track of previous places of fishes and bombs
     private int speed, remaining_lives;
 
     // Defining preferences as well as an integer to save a possible high score later on
@@ -80,7 +79,6 @@ public class MainActivity3 extends AppCompatActivity {
 
         // Initializing rest of the variables
         score = 0;
-        fish_prev = bomb_prev = -1;
         remaining_lives = 3;
 
         // Starting game (Time: 60 seconds)
@@ -147,23 +145,11 @@ public class MainActivity3 extends AppCompatActivity {
 
                 Random rnd = new Random();
                 int choice = rnd.nextInt(101); // Probability between 0 - 100
+                int rnd_index = rnd.nextInt(9);
 
-                // %67 probability for a fish to appear
-                if(choice >= 33) {
-                    int fish = rnd.nextInt(9);
-                    while(fish == fish_prev) // To make sure make fish appear at a different place each time
-                        fish = rnd.nextInt(9);
-                    fish_prev = fish;
-                    imageArray[fish].setVisibility(View.VISIBLE);
-                }
-                // %33 probability for a bomb to appear
-                else {
-                    int bomb = rnd.nextInt(9);
-                    while(bomb == bomb_prev) // To make sure make bomb appear at a different place each time
-                        bomb = rnd.nextInt(9);
-                    bomb_prev = bomb;
-                    bombArray[bomb].setVisibility(View.VISIBLE);
-                }
+                // %67 fish, %33 bomb
+                if(choice >= 33) imageArray[rnd_index].setVisibility(View.VISIBLE);
+                else bombArray[rnd_index].setVisibility(View.VISIBLE);
                 handler.postDelayed(this, speed);
             }
         };
