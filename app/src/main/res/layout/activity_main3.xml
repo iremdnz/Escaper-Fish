@@ -11,12 +11,12 @@
         android:id="@+id/gridLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="103dp"
-        android:layout_marginEnd="25dp"
-        android:layout_marginBottom="103dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gridLayout4">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout5">
 
         <ImageView
             android:id="@+id/imageView"
@@ -113,9 +113,12 @@
         android:id="@+id/gridLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        app:layout_constraintStart_toStartOf="@+id/gridLayout"
-        app:layout_constraintTop_toTopOf="@+id/gridLayout">
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gridLayout5">
 
         <ImageView
             android:id="@+id/imageView10"
@@ -226,6 +229,7 @@
         android:layout_marginTop="25dp"
         android:layout_marginEnd="14dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/gridLayout5"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
@@ -266,6 +270,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="25dp"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintEnd_toStartOf="@+id/gridLayout5"
+        app:layout_constraintHorizontal_chainStyle="spread_inside"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -322,13 +329,11 @@
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView3"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="408dp"
+        android:layout_height="86dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="17dp"
-        android:layout_marginEnd="1dp"
+        android:layout_marginTop="16dp"
         app:adSize="FULL_BANNER"
         app:adUnitId="ca-app-pub-3940256099942544/6300978111"
         app:layout_constraintBottom_toBottomOf="parent"
