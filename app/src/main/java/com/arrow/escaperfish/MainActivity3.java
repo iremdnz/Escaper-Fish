@@ -109,14 +109,14 @@ public class MainActivity3 extends AppCompatActivity {
 
     // Increasing score when player taps on a fish
     public void increaseScore(View view) {
-        //fish_snd.start();
+        fish_snd.start();
         score++;
         scoreText.setText(":" + score);
     }
 
     // Decreasing lives or checking remaining lives if player taps on a bomb
     public void liveAmount(View view) {
-        //bomb_snd.start();
+        bomb_snd.start();
         remaining_lives--;
         if       (remaining_lives == 2)  heart3.setVisibility(View.INVISIBLE);
         else if  (remaining_lives == 1)  heart2.setVisibility(View.INVISIBLE);

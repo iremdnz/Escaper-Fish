@@ -11,7 +11,6 @@
     <string name="medium">Medium</string>
     <string name="hard">Hard</string>
     <string name="main_title">Escaper\nFish</string>
-    <string name="high_score_0">High Score: 0</string>
     <string name="how_to_play">HOW TO PLAY?</string>
     <string name="help_p1">Try to catch as many fish as you can in 60 seconds.</string>
     <string name="help_p2">The appearing speed of the fish increments as levels get harder.</string>

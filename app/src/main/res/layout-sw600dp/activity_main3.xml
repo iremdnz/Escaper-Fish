@@ -7,123 +7,19 @@
     android:background="@drawable/menu"
     tools:context=".MainActivity3">
 
-    <GridLayout
-        android:id="@+id/gridLayout"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gridLayout5">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="120dp"
-            android:layout_height="150dp"
-            android:layout_row="0"
-            android:layout_column="0"
-            android:contentDescription="@string/gameFish"
-            android:onClick="increaseScore"
-            app:srcCompat="@drawable/fish1" />
-
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="120dp"
-            android:layout_height="150dp"
-            android:layout_row="0"
-            android:layout_column="1"
-            android:contentDescription="@string/gameFish"
-            android:onClick="increaseScore"
-            app:srcCompat="@drawable/fish8" />
-
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="120dp"
-            android:layout_height="150dp"
-            android:layout_row="0"
-            android:layout_column="2"
-            android:contentDescription="@string/gameFish"
-            android:onClick="increaseScore"
-            app:srcCompat="@drawable/fish3" />
-
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="120dp"
-            android:layout_height="150dp"
-            android:layout_row="1"
-            android:layout_column="0"
-            android:contentDescription="@string/gameFish"
-            android:onClick="increaseScore"
-            app:srcCompat="@drawable/fish4" />
-
-        <ImageView
-            android:id="@+id/imageView5"
-            android:layout_width="120dp"
-            android:layout_height="150dp"
-            android:layout_row="1"
-            android:layout_column="1"
-            android:contentDescription="@string/gameFish"
-            android:onClick="increaseScore"
-            app:srcCompat="@drawable/fish5" />
-
-        <ImageView
-            android:id="@+id/imageView6"
-            android:layout_width="120dp"
-            android:layout_height="150dp"
-            android:layout_row="1"
-            android:layout_column="2"
-            android:contentDescription="@string/gameFish"
-            android:onClick="increaseScore"
-            app:srcCompat="@drawable/fish6" />
-
-        <ImageView
-            android:id="@+id/imageView7"
-            android:layout_width="120dp"
-            android:layout_height="150dp"
-            android:layout_row="2"
-            android:layout_column="0"
-            android:contentDescription="@string/gameFish"
-            android:onClick="increaseScore"
-            app:srcCompat="@drawable/fish7" />
-
-        <ImageView
-            android:id="@+id/imageView8"
-            android:layout_width="120dp"
-            android:layout_height="150dp"
-            android:layout_row="2"
-            android:layout_column="1"
-            android:contentDescription="@string/gameFish"
-            android:onClick="increaseScore"
-            app:srcCompat="@drawable/fish2" />
-
-        <ImageView
-            android:id="@+id/imageView9"
-            android:layout_width="120dp"
-            android:layout_height="150dp"
-            android:layout_row="2"
-            android:layout_column="2"
-            android:contentDescription="@string/gameFish"
-            android:onClick="increaseScore"
-            app:srcCompat="@drawable/fish9" />
-    </GridLayout>
 
     <GridLayout
         android:id="@+id/gridLayout2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="5dp"
-        android:layout_marginEnd="5dp"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/gridLayout5">
+        app:layout_constraintTop_toTopOf="@+id/gridLayout">
 
         <ImageView
             android:id="@+id/imageView10"
-            android:layout_width="110dp"
-            android:layout_height="150dp"
+            android:layout_width="210dp"
+            android:layout_height="250dp"
             android:layout_row="0"
             android:layout_column="0"
             android:layout_gravity="center"
@@ -133,8 +29,8 @@
 
         <ImageView
             android:id="@+id/imageView11"
-            android:layout_width="110dp"
-            android:layout_height="150dp"
+            android:layout_width="210dp"
+            android:layout_height="250dp"
             android:layout_row="0"
             android:layout_column="1"
             android:layout_gravity="center"
@@ -144,8 +40,8 @@
 
         <ImageView
             android:id="@+id/imageView12"
-            android:layout_width="110dp"
-            android:layout_height="150dp"
+            android:layout_width="210dp"
+            android:layout_height="250dp"
             android:layout_row="0"
             android:layout_column="2"
             android:layout_gravity="center"
@@ -155,8 +51,8 @@
 
         <ImageView
             android:id="@+id/imageView13"
-            android:layout_width="110dp"
-            android:layout_height="150dp"
+            android:layout_width="210dp"
+            android:layout_height="250dp"
             android:layout_row="1"
             android:layout_column="0"
             android:layout_gravity="center"
@@ -166,8 +62,8 @@
 
         <ImageView
             android:id="@+id/imageView14"
-            android:layout_width="110dp"
-            android:layout_height="150dp"
+            android:layout_width="210dp"
+            android:layout_height="250dp"
             android:layout_row="1"
             android:layout_column="1"
             android:layout_gravity="center"
@@ -177,8 +73,8 @@
 
         <ImageView
             android:id="@+id/imageView15"
-            android:layout_width="110dp"
-            android:layout_height="150dp"
+            android:layout_width="210dp"
+            android:layout_height="250dp"
             android:layout_row="1"
             android:layout_column="2"
             android:layout_gravity="center"
@@ -188,8 +84,8 @@
 
         <ImageView
             android:id="@+id/imageView16"
-            android:layout_width="110dp"
-            android:layout_height="150dp"
+            android:layout_width="210dp"
+            android:layout_height="250dp"
             android:layout_row="2"
             android:layout_column="0"
             android:layout_gravity="center"
@@ -199,8 +95,8 @@
 
         <ImageView
             android:id="@+id/imageView17"
-            android:layout_width="110dp"
-            android:layout_height="150dp"
+            android:layout_width="210dp"
+            android:layout_height="250dp"
             android:layout_row="2"
             android:layout_column="1"
             android:layout_gravity="center"
@@ -210,8 +106,8 @@
 
         <ImageView
             android:id="@+id/imageView18"
-            android:layout_width="110dp"
-            android:layout_height="150dp"
+            android:layout_width="210dp"
+            android:layout_height="250dp"
             android:layout_row="2"
             android:layout_column="2"
             android:layout_gravity="center"
@@ -221,6 +117,107 @@
 
     </GridLayout>
 
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="135dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginBottom="159dp"
+        app:layout_constraintBottom_toTopOf="@+id/adView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="210dp"
+            android:layout_height="250dp"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:contentDescription="@string/gameFish"
+            android:onClick="increaseScore"
+            app:srcCompat="@drawable/fish1" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="210dp"
+            android:layout_height="250dp"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:contentDescription="@string/gameFish"
+            android:onClick="increaseScore"
+            app:srcCompat="@drawable/fish8" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="210dp"
+            android:layout_height="250dp"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:contentDescription="@string/gameFish"
+            android:onClick="increaseScore"
+            app:srcCompat="@drawable/fish3" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="210dp"
+            android:layout_height="250dp"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:contentDescription="@string/gameFish"
+            android:onClick="increaseScore"
+            app:srcCompat="@drawable/fish4" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="210dp"
+            android:layout_height="250dp"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:contentDescription="@string/gameFish"
+            android:onClick="increaseScore"
+            app:srcCompat="@drawable/fish5" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="210dp"
+            android:layout_height="250dp"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:contentDescription="@string/gameFish"
+            android:onClick="increaseScore"
+            app:srcCompat="@drawable/fish6" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="210dp"
+            android:layout_height="250dp"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:contentDescription="@string/gameFish"
+            android:onClick="increaseScore"
+            app:srcCompat="@drawable/fish7" />
+
+        <ImageView
+            android:id="@+id/imageView8"
+            android:layout_width="210dp"
+            android:layout_height="250dp"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:contentDescription="@string/gameFish"
+            android:onClick="increaseScore"
+            app:srcCompat="@drawable/fish2" />
+
+        <ImageView
+            android:id="@+id/imageView9"
+            android:layout_width="210dp"
+            android:layout_height="250dp"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:contentDescription="@string/gameFish"
+            android:onClick="increaseScore"
+            app:srcCompat="@drawable/fish9" />
+    </GridLayout>
 
     <GridLayout
         android:id="@+id/gridLayout3"
@@ -228,8 +225,9 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:layout_marginEnd="14dp"
+        android:layout_marginBottom="170dp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/gridLayout5"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
@@ -270,9 +268,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:layout_marginTop="25dp"
-        android:layout_marginEnd="6dp"
-        app:layout_constraintEnd_toStartOf="@+id/gridLayout5"
-        app:layout_constraintHorizontal_chainStyle="spread_inside"
+        android:layout_marginBottom="1074dp"
+        app:layout_constraintBottom_toTopOf="@+id/adView3"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -301,7 +298,11 @@
         android:id="@+id/gridLayout5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="290dp"
         android:layout_marginTop="25dp"
+        android:layout_marginEnd="283dp"
+        android:layout_marginBottom="165dp"
+        app:layout_constraintBottom_toTopOf="@+id/gridLayout"
         app:layout_constraintEnd_toStartOf="@+id/gridLayout3"
         app:layout_constraintStart_toEndOf="@+id/gridLayout4"
         app:layout_constraintTop_toTopOf="parent">
@@ -329,11 +330,13 @@
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView3"
-        android:layout_width="408dp"
-        android:layout_height="86dp"
+        android:layout_width="890dp"
+        android:layout_height="131dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="159dp"
+        android:layout_marginEnd="4dp"
         app:adSize="FULL_BANNER"
         app:adUnitId="ca-app-pub-3940256099942544/6300978111"
         app:layout_constraintBottom_toBottomOf="parent"
