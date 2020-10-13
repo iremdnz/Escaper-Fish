@@ -43,7 +43,6 @@ public class MainActivity3 extends AppCompatActivity {
     private CountDownTimer countDownTimer;
     private Handler handler;
     private Runnable runnable;
-    private MediaPlayer fish_snd, bomb_snd;
     private AdView mAdView;
 
     @Override
@@ -75,10 +74,6 @@ public class MainActivity3 extends AppCompatActivity {
         heart2 = findViewById(R.id.heart2);
         heart3 = findViewById(R.id.heart3);
 
-        // Initializing sound effects
-        fish_snd = MediaPlayer.create(this, R.raw.blop);
-        bomb_snd = MediaPlayer.create(this, R.raw.bom);
-
         // Getting speed according to difficulty level chosen by user
         Intent intent = getIntent();
         speed = intent.getIntExtra("speed",0);
@@ -109,14 +104,12 @@ public class MainActivity3 extends AppCompatActivity {
 
     // Increasing score when player taps on a fish
     public void increaseScore(View view) {
-        fish_snd.start();
         score++;
         scoreText.setText(":" + score);
     }
 
     // Decreasing lives or checking remaining lives if player taps on a bomb
     public void liveAmount(View view) {
-        bomb_snd.start();
         remaining_lives--;
         if       (remaining_lives == 2)  heart3.setVisibility(View.INVISIBLE);
         else if  (remaining_lives == 1)  heart2.setVisibility(View.INVISIBLE);
