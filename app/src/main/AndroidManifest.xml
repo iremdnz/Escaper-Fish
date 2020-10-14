@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.arrow.escaperfish">
+    package="com.edairem.escaperfish">
 
     <application
         android:allowBackup="true"
@@ -15,19 +15,19 @@
             android:value="ca-app-pub-3196942182820032~7640854161"/>
 
         <activity
-            android:name="com.arrow.escaperfish.MainActivity4"
+            android:name="com.edairem.escaperfish.MainActivity4"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
         <activity
-            android:name="com.arrow.escaperfish.MainActivity3"
+            android:name="com.edairem.escaperfish.MainActivity3"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
         <activity
-            android:name="com.arrow.escaperfish.MainActivity2"
+            android:name="com.edairem.escaperfish.MainActivity2"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"/>
         <activity
-            android:name="com.arrow.escaperfish.MainActivity"
+            android:name="com.edairem.escaperfish.MainActivity"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen">
             <intent-filter>

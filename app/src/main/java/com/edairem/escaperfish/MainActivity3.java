@@ -1,4 +1,4 @@
-package com.arrow.escaperfish;
+package com.edairem.escaperfish;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
