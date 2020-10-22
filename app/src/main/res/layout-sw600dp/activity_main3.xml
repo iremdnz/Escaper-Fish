@@ -18,8 +18,8 @@
 
         <ImageView
             android:id="@+id/imageView10"
-            android:layout_width="210dp"
-            android:layout_height="250dp"
+            android:layout_width="150dp"
+            android:layout_height="180dp"
             android:layout_row="0"
             android:layout_column="0"
             android:layout_gravity="center"
@@ -29,8 +29,8 @@
 
         <ImageView
             android:id="@+id/imageView11"
-            android:layout_width="210dp"
-            android:layout_height="250dp"
+            android:layout_width="150dp"
+            android:layout_height="180dp"
             android:layout_row="0"
             android:layout_column="1"
             android:layout_gravity="center"
@@ -40,8 +40,8 @@
 
         <ImageView
             android:id="@+id/imageView12"
-            android:layout_width="210dp"
-            android:layout_height="250dp"
+            android:layout_width="150dp"
+            android:layout_height="180dp"
             android:layout_row="0"
             android:layout_column="2"
             android:layout_gravity="center"
@@ -51,8 +51,8 @@
 
         <ImageView
             android:id="@+id/imageView13"
-            android:layout_width="210dp"
-            android:layout_height="250dp"
+            android:layout_width="150dp"
+            android:layout_height="180dp"
             android:layout_row="1"
             android:layout_column="0"
             android:layout_gravity="center"
@@ -62,8 +62,8 @@
 
         <ImageView
             android:id="@+id/imageView14"
-            android:layout_width="210dp"
-            android:layout_height="250dp"
+            android:layout_width="150dp"
+            android:layout_height="180dp"
             android:layout_row="1"
             android:layout_column="1"
             android:layout_gravity="center"
@@ -73,8 +73,8 @@
 
         <ImageView
             android:id="@+id/imageView15"
-            android:layout_width="210dp"
-            android:layout_height="250dp"
+            android:layout_width="150dp"
+            android:layout_height="180dp"
             android:layout_row="1"
             android:layout_column="2"
             android:layout_gravity="center"
@@ -84,8 +84,8 @@
 
         <ImageView
             android:id="@+id/imageView16"
-            android:layout_width="210dp"
-            android:layout_height="250dp"
+            android:layout_width="150dp"
+            android:layout_height="180dp"
             android:layout_row="2"
             android:layout_column="0"
             android:layout_gravity="center"
@@ -95,8 +95,8 @@
 
         <ImageView
             android:id="@+id/imageView17"
-            android:layout_width="210dp"
-            android:layout_height="250dp"
+            android:layout_width="150dp"
+            android:layout_height="180dp"
             android:layout_row="2"
             android:layout_column="1"
             android:layout_gravity="center"
@@ -106,8 +106,8 @@
 
         <ImageView
             android:id="@+id/imageView18"
-            android:layout_width="210dp"
-            android:layout_height="250dp"
+            android:layout_width="150dp"
+            android:layout_height="180dp"
             android:layout_row="2"
             android:layout_column="2"
             android:layout_gravity="center"
@@ -130,8 +130,8 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="210dp"
-            android:layout_height="250dp"
+            android:layout_width="150dp"
+            android:layout_height="180dp"
             android:layout_row="0"
             android:layout_column="0"
             android:contentDescription="@string/gameFish"
@@ -140,8 +140,8 @@
 
         <ImageView
             android:id="@+id/imageView2"
-            android:layout_width="210dp"
-            android:layout_height="250dp"
+            android:layout_width="150dp"
+            android:layout_height="180dp"
             android:layout_row="0"
             android:layout_column="1"
             android:contentDescription="@string/gameFish"
@@ -150,8 +150,8 @@
 
         <ImageView
             android:id="@+id/imageView3"
-            android:layout_width="210dp"
-            android:layout_height="250dp"
+            android:layout_width="150dp"
+            android:layout_height="180dp"
             android:layout_row="0"
             android:layout_column="2"
             android:contentDescription="@string/gameFish"
@@ -160,8 +160,8 @@
 
         <ImageView
             android:id="@+id/imageView4"
-            android:layout_width="210dp"
-            android:layout_height="250dp"
+            android:layout_width="150dp"
+            android:layout_height="180dp"
             android:layout_row="1"
             android:layout_column="0"
             android:contentDescription="@string/gameFish"
@@ -170,8 +170,8 @@
 
         <ImageView
             android:id="@+id/imageView5"
-            android:layout_width="210dp"
-            android:layout_height="250dp"
+            android:layout_width="150dp"
+            android:layout_height="180dp"
             android:layout_row="1"
             android:layout_column="1"
             android:contentDescription="@string/gameFish"
@@ -180,8 +180,8 @@
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="210dp"
-            android:layout_height="250dp"
+            android:layout_width="150dp"
+            android:layout_height="180dp"
             android:layout_row="1"
             android:layout_column="2"
             android:contentDescription="@string/gameFish"
@@ -190,8 +190,8 @@
 
         <ImageView
             android:id="@+id/imageView7"
-            android:layout_width="210dp"
-            android:layout_height="250dp"
+            android:layout_width="150dp"
+            android:layout_height="180dp"
             android:layout_row="2"
             android:layout_column="0"
             android:contentDescription="@string/gameFish"
@@ -200,8 +200,8 @@
 
         <ImageView
             android:id="@+id/imageView8"
-            android:layout_width="210dp"
-            android:layout_height="250dp"
+            android:layout_width="150dp"
+            android:layout_height="180dp"
             android:layout_row="2"
             android:layout_column="1"
             android:contentDescription="@string/gameFish"
@@ -210,8 +210,8 @@
 
         <ImageView
             android:id="@+id/imageView9"
-            android:layout_width="210dp"
-            android:layout_height="250dp"
+            android:layout_width="150dp"
+            android:layout_height="180dp"
             android:layout_row="2"
             android:layout_column="2"
             android:contentDescription="@string/gameFish"
